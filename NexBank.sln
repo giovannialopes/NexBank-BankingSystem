@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B194855D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.API.Account", "NexBank.Account\src\NexBank.API.Account\NexBank.API.Account.csproj", "{001127ED-EA71-4105-8DDA-036599BF3BBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.API.Domain", "NexBank.Account\src\NexBank.API.Domain\NexBank.API.Domain.csproj", "{26E6D640-0C56-4919-8E79-A1F7E640FFB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.API.Domain", "NexBank.Account\src\NexBank.API.Domain\NexBank.API.Domain.csproj", "{26E6D640-0C56-4919-8E79-A1F7E640FFB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.API.Infrastructure", "NexBank.Account\src\NexBank.API.Infrastructure\NexBank.API.Infrastructure.csproj", "{E56D056B-C00C-46E1-BBB2-A9BDB4987969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.API.Infrastructure", "NexBank.Account\src\NexBank.API.Infrastructure\NexBank.API.Infrastructure.csproj", "{E56D056B-C00C-46E1-BBB2-A9BDB4987969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.Tests", "NexBank.Account\tests\NexBank.Tests\NexBank.Tests.csproj", "{87497B45-E811-49EB-B194-93CED1A93021}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.Tests", "NexBank.Account\tests\NexBank.Tests\NexBank.Tests.csproj", "{87497B45-E811-49EB-B194-93CED1A93021}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
