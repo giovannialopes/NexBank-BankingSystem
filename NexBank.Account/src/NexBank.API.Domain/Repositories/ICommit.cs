@@ -1,4 +1,4 @@
-﻿namespace NexBank.API.Domain.Repositories;
+﻿namespace NexBank.Domain.Account.Repositories;
 
 public interface ICommit
 {

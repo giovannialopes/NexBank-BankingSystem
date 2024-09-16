@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NexBank.API.Domain\NexBank.API.Domain.csproj" />
+    <ProjectReference Include="..\NexBank.API.Domain\NexBank.Domain.Account.csproj" />
   </ItemGroup>
 
 </Project>

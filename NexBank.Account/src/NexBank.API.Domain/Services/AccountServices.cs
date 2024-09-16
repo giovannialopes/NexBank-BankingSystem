@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using NexBank.API.Domain.DTO;
-using NexBank.API.Domain.Entities;
-using NexBank.API.Domain.Repositories;
-using NexBank.API.Domain.Utilities;
+using NexBank.Domain.Account.DTO;
+using NexBank.Domain.Account.Entities;
+using NexBank.Domain.Account.Repositories;
+using NexBank.Domain.Account.Utilities;
 
-namespace NexBank.API.Domain.Services;
+namespace NexBank.Domain.Account.Services;
 
 public class AccountServices(IAccountRepository repository, IMapper mapper) : IAccountServices
 {

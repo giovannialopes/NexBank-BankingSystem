@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NexBank.API.Domain.AutoMapper;
-using NexBank.API.Domain.Services;
+using NexBank.Domain.Account.AutoMapper;
+using NexBank.Domain.Account.Services;
 
-namespace NexBank.API.Domain.Dependency;
+namespace NexBank.Domain.Account.Dependency;
 
 public static class DependencyInjectionDomain
 {

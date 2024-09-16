@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using static NexBank.API.Domain.Entities.AccountEnt;
+﻿using static NexBank.Domain.Account.Entities.AccountEnt;
 
-namespace NexBank.API.Domain.DTO;
+namespace NexBank.Domain.Account.DTO;
 
 public class AccountDTO
 {

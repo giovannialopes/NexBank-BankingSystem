@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using NexBank.API.Domain.Dependency;
-using NexBank.API.Infrastructure.DataAcess;
-using NexBank.API.Infrastructure.Dependency;
+using NexBank.Domain.Account.Dependency;
+using NexBank.Infrastructure.Account.DataAcess;
+using NexBank.Infrastructure.Account.Dependency;
 
 var builder = WebApplication.CreateBuilder(args);
 

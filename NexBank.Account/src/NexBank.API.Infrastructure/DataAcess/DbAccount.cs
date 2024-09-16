@@ -1,15 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NexBank.API.Domain.Entities;
+using NexBank.Domain.Account.Entities;
 
-namespace NexBank.API.Infrastructure.DataAcess
+namespace NexBank.Infrastructure.Account.DataAcess;
+
+public class DbAccount : DbContext
 {
-    public class DbAccount : DbContext
+    public DbAccount(DbContextOptions options) : base(options)
     {
-        public DbAccount(DbContextOptions options) : base(options)
-        {
 
-        }
-
-        public DbSet<AccountEnt> Tb_Account { get; set; }
     }
+
+    public DbSet<AccountEnt> Tb_Account { get; set; }
 }

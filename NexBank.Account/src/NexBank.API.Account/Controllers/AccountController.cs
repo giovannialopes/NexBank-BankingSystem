@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NexBank.API.Domain.DTO;
-using NexBank.API.Domain.Services;
+using NexBank.Domain.Account.DTO;
+using NexBank.Domain.Account.Services;
 
 namespace NexBank.API.Account.Controllers;
 

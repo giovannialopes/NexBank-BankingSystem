@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using NexBank.API.Domain.DTO;
-using NexBank.API.Domain.Entities;
+using NexBank.Domain.Account.DTO;
+using NexBank.Domain.Account.Entities;
 
-namespace NexBank.API.Domain.AutoMapper;
+namespace NexBank.Domain.Account.AutoMapper;
 
 public class AutoMapping : Profile
 {

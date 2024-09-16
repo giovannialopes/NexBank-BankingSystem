@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NexBank.API.Domain.Repositories;
-using NexBank.API.Infrastructure.Repositories;
+using NexBank.Domain.Account.Repositories;
+using NexBank.Infrastructure.Account.Repositories;
 
-namespace NexBank.API.Infrastructure.Dependency;
+namespace NexBank.Infrastructure.Account.Dependency;
 
 public static class DependencyInjectionInfrastructure
 {

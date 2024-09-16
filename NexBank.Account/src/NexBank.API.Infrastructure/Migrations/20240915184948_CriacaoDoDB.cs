@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace NexBank.API.Infrastructure.Migrations
+namespace NexBank.Infrastructure.Account.Migrations
 {
     /// <inheritdoc />
     public partial class CriacaoDoDB : Migration

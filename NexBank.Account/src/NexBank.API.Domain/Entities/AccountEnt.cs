@@ -1,4 +1,4 @@
-﻿namespace NexBank.API.Domain.Entities;
+﻿namespace NexBank.Domain.Account.Entities;
 
 public class AccountEnt
 {

@@ -1,6 +1,6 @@
-﻿using NexBank.API.Domain.Entities;
+﻿using NexBank.Domain.Account.Entities;
 
-namespace NexBank.API.Domain.Repositories;
+namespace NexBank.Domain.Account.Repositories;
 
 public interface IAccountRepository : ICommit
 {

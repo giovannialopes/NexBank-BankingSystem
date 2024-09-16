@@ -1,6 +1,6 @@
-﻿using NexBank.API.Domain.DTO;
+﻿using NexBank.Domain.Account.DTO;
 
-namespace NexBank.API.Domain.Services;
+namespace NexBank.Domain.Account.Services;
 
 public interface IAccountServices
 {

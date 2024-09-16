@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NexBank.API.Domain\NexBank.API.Domain.csproj" />
-    <ProjectReference Include="..\NexBank.API.Infrastructure\NexBank.API.Infrastructure.csproj" />
+    <ProjectReference Include="..\NexBank.API.Domain\NexBank.Domain.Account.csproj" />
+    <ProjectReference Include="..\NexBank.API.Infrastructure\NexBank.Infrastructure.Account.csproj" />
   </ItemGroup>
 
 </Project>

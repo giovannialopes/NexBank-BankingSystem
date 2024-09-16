@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NexBank.API.Domain.Utilities;
+﻿namespace NexBank.Domain.Account.Utilities;
 
 public static class Generator
 {

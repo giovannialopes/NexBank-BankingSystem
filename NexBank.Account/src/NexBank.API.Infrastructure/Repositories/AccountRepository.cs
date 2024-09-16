@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NexBank.API.Domain.DTO;
-using NexBank.API.Domain.Entities;
-using NexBank.API.Domain.Repositories;
-using NexBank.API.Infrastructure.DataAcess;
+using NexBank.Domain.Account.Entities;
+using NexBank.Domain.Account.Repositories;
+using NexBank.Infrastructure.Account.DataAcess;
 
-namespace NexBank.API.Infrastructure.Repositories;
+namespace NexBank.Infrastructure.Account.Repositories;
 
 public class AccountRepository(DbAccount dbAccount) : IAccountRepository
 {
