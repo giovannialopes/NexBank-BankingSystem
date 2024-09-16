@@ -14,6 +14,32 @@ public class AccountController : ControllerBase
         [FromBody] AccountDTO.CreateAccountRequest request)
     {
         var response = await services.CreateAccount(request);
+        return Created("", response);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAccounts(
+        [FromServices] IAccountServices services)
+    {
+        var response = await services.GetAccounts();
+        return Ok(response);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateAccount(
+        [FromServices] IAccountServices services,
+        [FromBody] AccountDTO.UpdateAccountRequest request)
+    {
+        var response = await services.UpdateAccount(request);
+        return Ok(response);
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> DeleteAccount(
+        [FromServices] IAccountServices services,
+        [FromHeader] int id)
+    {
+        var response = await services.DeleteAccount(id);
         return Ok(response);
     }
 }

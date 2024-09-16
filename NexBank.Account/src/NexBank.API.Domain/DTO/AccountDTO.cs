@@ -10,8 +10,9 @@ public class AccountDTO
         public AccountType Type { get; set; }
     }
 
-    public class CreateAccountResponse
+    public class AccountResponse
     {
+        public int Id { get; set; }
         public string AccountNumber { get; set; } = string.Empty;
         public string AgencyNumber { get; set; } = string.Empty;
         public decimal Balance { get; set; }
@@ -21,6 +22,14 @@ public class AccountDTO
 
     public class UpdateAccountRequest
     {
+        public int Id { get; set; }
+        public string Type { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+    }
+
+    public class AccountResponseList
+    {
+        public List<AccountResponse> Accounts { get; set; } = new List<AccountResponse>();
     }
 
 }

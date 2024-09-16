@@ -8,7 +8,7 @@ namespace NexBank.API.Domain.Services;
 
 public class AccountServices(IAccountRepository repository, IMapper mapper) : IAccountServices
 {
-    public async Task<AccountDTO.CreateAccountResponse?> CreateAccount(AccountDTO.CreateAccountRequest? request)
+    public async Task<AccountDTO.AccountResponse?> CreateAccount(AccountDTO.CreateAccountRequest request)
     {
         var account = mapper.Map<AccountEnt>(request);
 
@@ -23,7 +23,52 @@ public class AccountServices(IAccountRepository repository, IMapper mapper) : IA
 
             await repository.Commit();
 
-            return mapper.Map<AccountDTO.CreateAccountResponse>(account);
+            return mapper.Map<AccountDTO.AccountResponse>(account);
+        }
+
+        return default;
+    }
+
+    public async Task<string?> DeleteAccount(int id)
+    {
+        var account = await repository.GetAccountById(id);
+        if (account != null)
+        {
+            account.UpdatedAt = DateTime.Now;
+            account.Status = AccountEnt.AccountStatus.Closed;
+            repository.DeleteAccount(account);
+
+            await repository.Commit();
+
+            return "Conta Deletada";
+        }
+        return default;
+    }
+
+    public async Task<AccountDTO.AccountResponseList?> GetAccounts()
+    {
+        var accounts = await repository.GetAccounts();
+        if (accounts.Count != 0)
+            return new AccountDTO.AccountResponseList { Accounts = mapper.Map<List<AccountDTO.AccountResponse>>(accounts) };
+
+        return default;
+    }
+
+    public async Task<AccountDTO.AccountResponse?> UpdateAccount(AccountDTO.UpdateAccountRequest request)
+    {
+       
+        var verifyAccount = await repository.GetAccountById(request.Id);
+
+        if (verifyAccount != null)
+        {
+            var account = mapper.Map(request, verifyAccount);
+            account.UpdatedAt = DateTime.Now;
+
+            repository.UpdateAccount(account);
+
+            await repository.Commit();
+
+            return mapper.Map<AccountDTO.AccountResponse>(account);
         }
 
         return default;

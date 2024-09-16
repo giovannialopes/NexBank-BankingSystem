@@ -15,10 +15,16 @@ public class AutoMapping : Profile
     private void RequestToEntity()
     {
         CreateMap<AccountDTO.CreateAccountRequest, AccountEnt>();
+        CreateMap<AccountDTO.UpdateAccountRequest, AccountEnt>()
+            .ForMember(config => config.AgencyNumber, opt => opt.Ignore())
+            .ForMember(config => config.AccountNumber, opt => opt.Ignore());
+
+
     }
 
     private void EntityToResponse()
     {
-        CreateMap<AccountEnt, AccountDTO.CreateAccountResponse>();
+        CreateMap<AccountEnt, AccountDTO.AccountResponse>();
+        CreateMap<AccountEnt, AccountDTO.AccountResponseList>();
     }
 }
