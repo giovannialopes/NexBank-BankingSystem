@@ -1,0 +1,6 @@
+@NexBank.API.Login_HostAddress = http://localhost:5041
+
+GET {{NexBank.API.Login_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
