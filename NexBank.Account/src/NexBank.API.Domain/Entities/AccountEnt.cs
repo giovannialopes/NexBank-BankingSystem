@@ -9,8 +9,8 @@ public class AccountEnt
     public decimal Balance { get; set; }
     public AccountType Type { get; set; }
     public AccountStatus Status { get; set; } = AccountStatus.Active;
-    public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
     public enum AccountType
     {

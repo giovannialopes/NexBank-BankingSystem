@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using NexBank.API.Domain.Dependency;
 using NexBank.API.Infrastructure.DataAcess;
+using NexBank.API.Infrastructure.Dependency;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +13,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DbAccount>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+
+builder.Services.AddDomain();
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
