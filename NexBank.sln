@@ -27,11 +27,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0CBB044A-8D3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{14983C35-FAC1-492A-948C-33AD4174CF36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.API.Login", "NexBank.Login\src\NexBank.API.Login\NexBank.API.Login.csproj", "{8E0AD9FA-D456-4AB2-A530-11A6B14F50F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.API.Login", "NexBank.Login\src\NexBank.API.Login\NexBank.API.Login.csproj", "{8E0AD9FA-D456-4AB2-A530-11A6B14F50F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.Domain.Login", "NexBank.Login\src\NexBank.Domain.Login\NexBank.Domain.Login.csproj", "{F54F34AA-6C85-4579-996D-11F86CC161F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.Domain.Login", "NexBank.Login\src\NexBank.Domain.Login\NexBank.Domain.Login.csproj", "{F54F34AA-6C85-4579-996D-11F86CC161F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.Infrastructure.Login", "NexBank.Login\src\NexBank.Infrastructure.Login\NexBank.Infrastructure.Login.csproj", "{819E0953-0590-4C6B-85D1-71985FAF1286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexBank.Infrastructure.Login", "NexBank.Login\src\NexBank.Infrastructure.Login\NexBank.Infrastructure.Login.csproj", "{819E0953-0590-4C6B-85D1-71985FAF1286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.API.Transaction", "NexBank.Transaction\src\NexBank.API.Transaction\NexBank.API.Transaction.csproj", "{98E9075F-767B-442A-8F69-32F53DBD851A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.Domain.Transaction", "NexBank.Transaction\src\NexBank.Domain.Transaction\NexBank.Domain.Transaction.csproj", "{6C042E53-2724-44DC-BBE9-ABA336239B38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexBank.Infrastructure.Transaction", "NexBank.Transaction\src\NexBank.Infrastructure.Transaction\NexBank.Infrastructure.Transaction.csproj", "{84BFA650-1F21-47D8-9925-D5CD625577E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{819E0953-0590-4C6B-85D1-71985FAF1286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{819E0953-0590-4C6B-85D1-71985FAF1286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{819E0953-0590-4C6B-85D1-71985FAF1286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E9075F-767B-442A-8F69-32F53DBD851A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E9075F-767B-442A-8F69-32F53DBD851A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E9075F-767B-442A-8F69-32F53DBD851A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E9075F-767B-442A-8F69-32F53DBD851A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C042E53-2724-44DC-BBE9-ABA336239B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C042E53-2724-44DC-BBE9-ABA336239B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C042E53-2724-44DC-BBE9-ABA336239B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C042E53-2724-44DC-BBE9-ABA336239B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84BFA650-1F21-47D8-9925-D5CD625577E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84BFA650-1F21-47D8-9925-D5CD625577E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84BFA650-1F21-47D8-9925-D5CD625577E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84BFA650-1F21-47D8-9925-D5CD625577E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +98,9 @@ Global
 		{8E0AD9FA-D456-4AB2-A530-11A6B14F50F0} = {0CBB044A-8D39-4835-85E3-CA9CEA433C19}
 		{F54F34AA-6C85-4579-996D-11F86CC161F9} = {0CBB044A-8D39-4835-85E3-CA9CEA433C19}
 		{819E0953-0590-4C6B-85D1-71985FAF1286} = {0CBB044A-8D39-4835-85E3-CA9CEA433C19}
+		{98E9075F-767B-442A-8F69-32F53DBD851A} = {7C6ED313-BEDE-4AD9-B9DB-28F8F554EB5C}
+		{6C042E53-2724-44DC-BBE9-ABA336239B38} = {7C6ED313-BEDE-4AD9-B9DB-28F8F554EB5C}
+		{84BFA650-1F21-47D8-9925-D5CD625577E1} = {7C6ED313-BEDE-4AD9-B9DB-28F8F554EB5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C71D7A0-3229-4E51-8C50-BF7C66027D04}

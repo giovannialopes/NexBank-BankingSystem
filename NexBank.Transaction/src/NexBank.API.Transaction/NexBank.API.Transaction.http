@@ -1,0 +1,6 @@
+@NexBank.API.Transaction_HostAddress = http://localhost:5196
+
+GET {{NexBank.API.Transaction_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
