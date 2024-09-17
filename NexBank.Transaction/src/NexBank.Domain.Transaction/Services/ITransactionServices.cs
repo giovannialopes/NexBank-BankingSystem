@@ -4,7 +4,7 @@ namespace NexBank.Domain.Transaction.Services;
 
 public interface ITransactionServices
 {
-    Task<string?> CreateLogin(TransactionDTO.CreateTransactionRequest request);
+    Task<TransactionDTO.TransactionResponse?> RegisterTransaction(TransactionDTO.RegisterTransactionRequest request);
 
     Task<TransactionDTO.TransactionResponse?> GetLogin(TransactionDTO.TransactionRequest request);
 

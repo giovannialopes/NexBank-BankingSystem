@@ -8,7 +8,7 @@ namespace NexBank.Domain.Transaction.Services;
 public class TransactionServices(ITransactionRepository repository,
      IMapper mapper) : ITransactionServices
 {
-    public async Task<string?> CreateLogin(TransactionDTO.CreateTransactionRequest request)
+    public async Task<string?> RegisterTransaction(TransactionDTO.RegisterTransactionRequest request)
     {
         var User = mapper.Map<TransactionEnt>(request);
 

@@ -1,26 +1,25 @@
-﻿namespace NexBank.Domain.Transaction.DTO;
+﻿using NexBank.Domain.Transaction.Entities;
+
+namespace NexBank.Domain.Transaction.DTO;
 
 public class TransactionDTO
 {
-    public class TransactionRequest()
+    public class RegisterTransactionRequest()
     {
-        public string Email { get; set; } = string.Empty;
-        public string PasswordHash { get; set; } = string.Empty;
-    }
-
-    public class CreateTransactionRequest()
-    {
-        public string Name { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string PasswordHash { get; set; } = string.Empty;
-        public string CPFOrCNPJ { get; set; } = string.Empty;
-        public string DateOfBirth { get; set; } = string.Empty;
-        public string Address { get; set; } = string.Empty;
-        public string Phone { get; set; } = string.Empty;
+        public int SourceAccountId { get; set; }
+        public int DestinationAccountId { get; set; }
+        public decimal Amount { get; set; }
+        public TransactionType TransactionType { get; set; }
+        public TransactionStatus Status { get; set; } = TransactionStatus.Pending;
+        public string Description { get; set; } = string.Empty;
     }
 
     public class TransactionResponse()
     {
-        public string Token { get; set; } = string.Empty;
+        public int DestinationAccountId { get; set; }
+        public decimal Amount { get; set; }
+        public TransactionType TransactionType { get; set; }
+        public TransactionStatus Status { get; set; }
+        public string Description { get; set; } = string.Empty;
     }
 }

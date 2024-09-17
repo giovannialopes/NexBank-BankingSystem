@@ -14,7 +14,7 @@ public class AutoMapping : Profile
 
     private void RequestToEntity()
     {
-        CreateMap<TransactionDTO.CreateTransactionRequest, TransactionEnt>();
+        CreateMap<TransactionDTO.RegisterTransactionRequest, TransactionEnt>();
         CreateMap<TransactionDTO.TransactionRequest, TransactionEnt>();
     }
 
