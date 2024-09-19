@@ -9,10 +9,8 @@ public class TransactionRepository(DbTransaction dbTransaction) : ITransactionRe
 {
     public async Task Commit() => await dbTransaction.SaveChangesAsync();
 
-    public void AddUser(TransactionEnt login) => dbTransaction.Tb_Transaction.AddAsync(login);
+    public void AddTransaction(TransactionEnt transaction) => dbTransaction.Tb_Transaction.AddAsync(transaction);
 
-    public void DeleteUser(TransactionEnt login) => dbTransaction.Tb_Transaction.Update(login);
-
-    public async Task<TransactionEnt?> GetUserById(int id) => await dbTransaction.Tb_Transaction.AsNoTracking().FirstOrDefaultAsync(config => config.Id == id);
+    public async Task<TransactionEnt?> GetTransactionById(int id) => await dbTransaction.Tb_Transaction.AsNoTracking().FirstOrDefaultAsync(config => config.Id == id);
 
 }

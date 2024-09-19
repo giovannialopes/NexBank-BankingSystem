@@ -16,4 +16,13 @@ public class TransactionController : ControllerBase
         var response = await services.RegisterTransaction(request);
         return Ok(response);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetTransaction(
+        [FromServices] ITransactionServices services,
+        [FromHeader] int id)    
+    {
+        var response = await services.GetTransactionById(id);
+        return Ok(response);
+    }
 }

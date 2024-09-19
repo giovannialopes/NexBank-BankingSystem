@@ -8,24 +8,25 @@ namespace NexBank.Domain.Transaction.Services;
 public class TransactionServices(ITransactionRepository repository,
      IMapper mapper) : ITransactionServices
 {
-    public async Task<string?> RegisterTransaction(TransactionDTO.RegisterTransactionRequest request)
+    public async Task<TransactionDTO.TransactionResponse?> GetTransactionById(int id)
     {
-        var User = mapper.Map<TransactionEnt>(request);
+        var Transaction = await repository.GetTransactionById(id);
+        if (Transaction != null) 
+        {
+            return mapper.Map<TransactionDTO.TransactionResponse>(Transaction);
+        }
+        return default;
+    }
 
-        repository.AddUser(User);
+    public async Task<TransactionDTO.TransactionResponse?> RegisterTransaction(TransactionDTO.RegisterTransactionRequest request)
+    {
+        var Transaction = mapper.Map<TransactionEnt>(request);
+
+        repository.AddTransaction(Transaction);
 
         await repository.Commit();
 
-        return "Usuário Criado";
-    }
-
-    public async Task<string?> DeleteLogin(int id)
-    {
-
-    }
-
-    public async Task<TransactionDTO.TransactionResponse?> GetLogin(TransactionDTO.TransactionRequest request)
-    {
+        return mapper.Map<TransactionDTO.TransactionResponse>(Transaction);
 
     }
 }

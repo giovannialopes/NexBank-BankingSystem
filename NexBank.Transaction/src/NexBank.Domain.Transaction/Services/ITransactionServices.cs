@@ -6,7 +6,6 @@ public interface ITransactionServices
 {
     Task<TransactionDTO.TransactionResponse?> RegisterTransaction(TransactionDTO.RegisterTransactionRequest request);
 
-    Task<TransactionDTO.TransactionResponse?> GetLogin(TransactionDTO.TransactionRequest request);
+    Task<TransactionDTO.TransactionResponse?> GetTransactionById(int id);
 
-    Task<string?> DeleteLogin(int id);
 }

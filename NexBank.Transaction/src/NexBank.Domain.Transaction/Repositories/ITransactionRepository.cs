@@ -4,9 +4,7 @@ namespace NexBank.Domain.Transaction.Repositories;
 
 public interface ITransactionRepository : ICommit
 {
-    void AddUser(TransactionEnt login);
+    void AddTransaction(TransactionEnt transaction);
 
-    void DeleteUser(TransactionEnt login);
-
-    Task<TransactionEnt?> GetUserById(int id);
+    Task<TransactionEnt?> GetTransactionById(int id);
 }
